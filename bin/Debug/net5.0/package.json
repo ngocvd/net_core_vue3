@@ -1,0 +1,52 @@
+{
+  "name": "bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "@j-t-mcc/vue3-chartjs": "^1.1.4",
+    "@vue/compiler-sfc": "^3.2.12",
+    "axios": "^0.21.4",
+    "babel-loader": "^8.2.2",
+    "bootstrap": "^5.1.1",
+    "bootstrap-icons-vue": "^0.7.0",
+    "browser-sync": "^2.27.5",
+    "chart.js": "^3.5.1",
+    "core-js-compat": "^3.4.7",
+    "css-loader": "^6.3.0",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "maska": "^1.4.5",
+    "moment": "^2.29.1",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.1.14",
+    "postcss-loader": "^6.1.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
+    "vue": "^3.2.12",
+    "vue-axios": "^3.3.7",
+    "vue-chart-3": "^0.5.8",
+    "vue-chartjs": "^3.5.1",
+    "vue-jquery-mask": "^2.0.0",
+    "vue-loader": "^16.5.0",
+    "vue-template-compiler": "^2.6.14",
+    "vue3-chart-v2": "^0.8.3"
+  },
+  "devDependencies": {
+    "csv-loader": "^3.0.3",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "stylelint-webpack-plugin": "^3.0.1",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "xml-loader": "^1.2.1"
+  }
+}
