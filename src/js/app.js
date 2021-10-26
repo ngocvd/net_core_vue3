@@ -8,7 +8,7 @@ import moment from 'moment'
 //import Vue3ChartJs from '@j-t-mcc/vue3-chartjs';
 //import { Chart, registerables } from 'chart.js';
 //Chart.register(...registerables);
-import BarChart from './components/BarChart.vue'
+import LineChart from './components/LineChart.vue'
 import vueMask from 'vue-jquery-mask'
 import Maska from 'maska'
 moment.locale('id')
@@ -22,7 +22,7 @@ const app = createApp({
   mixins: [myMixin],
   components: {
     //Vue3ChartJs,
-    BarChart,
+      LineChart,
     vueMask
   }
 })

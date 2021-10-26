@@ -9,6 +9,34 @@
                 date: null,
                 url: 'http://url',
                 options: {},
+                datas: {
+                    labels: [
+                        "January",
+                        "February",
+                        "March",
+                        "April",
+                        "May",
+                        "June",
+                        "July",
+                    ],
+                    datasets: [
+                        {
+                            label: "Caffine Consumption",
+                            data: [65, 59, 80, 81, 56, 55, 40],
+                            fill: false,
+                            borderColor: "#41B883",
+                            backgroundColor: "black",
+                        },
+                        {
+                            label: "Productivity",
+                            data: [70, 25, 110, 90, 5, 60, 30],
+                            fill: false,
+                            borderColor: "#00D8FF",
+                            tension: 0.5,
+                            backgroundColor: "blue",
+                        },
+                    ],
+                }
             }
         },
 
@@ -16,11 +44,13 @@
 </script>
 }
 <div class="text-center">
-    <h1 class="display-4">Welcome
+    <h1 class="display-4">
+        Welcome
         <b-icon-facebook />
     </h1>
-    <bar-chart :url=""></bar-chart>
-    <input v-maska="{ mask: ['!#HHHHHH', '!#HHHHHH-HH'], tokens: { 'H': { pattern: /[0-9a-fA-F]/, uppercase: true }}}">n
+    <line-chart :datasets="datas"></line-chart>
+    <line-chart :datasets="datas"></line-chart>
+    <input v-maska="{ mask: ['!#HHHHHH', '!#HHHHHH-HH'], tokens: { 'H': { pattern: /[0-9a-fA-F]/, uppercase: true }}}">
 </div>
 <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
