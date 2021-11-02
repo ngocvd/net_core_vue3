@@ -6,6 +6,8 @@ npm install
 
 npm run build
 
+npm run dev
+
 Dev:
 - Thực hiện bổ sung các component vue như bình thường, include vào app.js.
 - Các hàm bổ sung bổ sung vào myMixin tại các file .cshtml.
