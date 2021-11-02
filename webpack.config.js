@@ -2,8 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
-  //mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  mode:  'development',
+  mode: 'development',
   entry: {
     app: ['./src/js/app.js', './src/css/app.css']
   },

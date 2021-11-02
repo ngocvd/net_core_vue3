@@ -9,6 +9,28 @@
                 date: null,
                 url: 'http://url',
                 options: {},
+                myValue: '',
+                // define the default value
+                value: null,
+                // define options
+                options1: [{
+                    id: 'a',
+                    label: 'a',
+                    
+                    children: [{
+                        id: 'aa',
+                        label: 'aa',
+                    }, {
+                        id: 'ab',
+                        label: 'ab',
+                    }],
+                }, {
+                    id: 'b',
+                    label: 'b',
+                }, {
+                    id: 'c',
+                    label: 'c',
+                }],
                 datas: {
                     labels: [
                         "January",
@@ -39,7 +61,18 @@
                 }
             }
         },
+        methods: {
+            myChangeEvent(val) {
+                console.log(val);
 
+            },
+            mySelectEvent({ id, text }) {
+                console.log({ id, text })
+            },
+            onChange() {
+                console.log(this.months)
+            }
+        }
     };
 </script>
 }
@@ -48,7 +81,12 @@
         Welcome
         <b-icon-facebook />
     </h1>
-    <line-chart :datasets="datas"></line-chart>
+    <div>
+        <treeselect :value-consists-of="'LEAF_PRIORITY'" v-model="value" :multiple="true" :options="options1" />
+        <select2 v-model="myValue" :options="[{id: '1', text: 'Lựa chọn 1'}, {id: '2', text: 'Lựa chọn 2'}]" :settings="{ settingOption: value, settingOption: value, multiple: true }" v-on:change="myChangeEvent($event)" v-on:select="mySelectEvent($event)" />
+        <h4>Value: {{ myValue }}</h4>
+    </div>
+        <line-chart :datasets="datas"></line-chart>
     <line-chart :datasets="datas"></line-chart>
     <input v-maska="{ mask: ['!#HHHHHH', '!#HHHHHH-HH'], tokens: { 'H': { pattern: /[0-9a-fA-F]/, uppercase: true }}}">
 </div>
